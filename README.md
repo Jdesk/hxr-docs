@@ -1,4 +1,4 @@
-## Deploy Kubernetes Cluster on Windows Nodes
+## Deploy Kubernetes Cluster and Windows Server Pods
 
 1.  From the azure cli, your first step will be to run the following command which will build your AKS (Azure Kubernetes Service) Cluster with all the requirements to run Kubernetes on Windows Nodes (so you can run windows containers).  
 
