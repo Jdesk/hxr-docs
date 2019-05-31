@@ -1,0 +1,20 @@
+az aks create \
+    --resource-group hxr-win-k8s \
+    --name hxr-win-k8s \
+    --node-count 1 \
+    --enable-addons monitoring \
+    --kubernetes-version 1.14.0 \
+    --generate-ssh-keys \
+    --windows-admin-password hxr14328jkUi! \
+    --windows-admin-username azureuser \
+    --enable-vmss \
+    --network-plugin azure
+
+
+az aks nodepool add \
+    --resource-group hxr-win-k8s \
+    --cluster-name hxr-win-k8s \
+    --os-type Windows \
+    --name npwin \
+    --node-count 1 \
+    --kubernetes-version 1.14.0
